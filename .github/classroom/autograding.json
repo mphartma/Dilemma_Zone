@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Test: Problem Project / submission files",
+      "setup": "sudo -H pip3 install pytest numpy",
+      "run": "pytest --tb=line tests/problem_Project/test_submission_files.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 70
+    },
+    {
+      "name": "Test: Problem Project / python code",
+      "setup": "sudo -H pip3 install pytest numpy",
+      "run": "pytest --tb=line tests/problem_Project/test_python_code.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 28
+    },
+    {
+      "name": "Test: Problem Project / README",
+      "setup": "sudo -H pip3 install pytest numpy",
+      "run": "pytest --tb=line tests/problem_Project/test_README.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    }
+  ]
+}
