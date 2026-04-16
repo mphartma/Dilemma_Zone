@@ -1,48 +1,47 @@
-# Project 1: To Brake Or Not To Brake
-[![Autograding Workflow](../../actions/workflows/classroom.yml/badge.svg)](../../actions/workflows/classroom.yml) ![Points badge](../../blob/badges/.github/badges/points.svg)
+# Dilemma Zone Analysis
 
-You will investigate the decisions that a driver can make when braking
-for a traffic light that switches from green to yellow by writing code
-in Python to model the car's behavior for different decisions and
-parameters. You will write a short report to communicate, discuss and
-summarize your reasoning and your results.
+This project analyzes driver decision-making at a signalized intersection during the onset of a yellow light, with a focus on the "dilemma zone": the region where a driver may be unable to either stop comfortably before the intersection or proceed through it safely. The model uses vehicle speed, distance from the stop line, reaction assumptions, and braking behavior to classify likely outcomes and visualize the conditions that produce safe or unsafe decisions.
 
-## Submission
+The goal of the project is to study how intersection approach conditions influence driver response and to identify the boundary between stopping and proceeding. This kind of analysis is relevant to traffic engineering, roadway safety, and signal timing design.
 
-Submit your
+## Project Contents
 
-* report
-* code
-* `README.txt`
+- `dilemma_zone_analysis.ipynb` — main notebook containing the model, calculations, plots, and discussion
 
-in your private Project 1 repository in the `Submission` directory.
+## Methods
 
-You may combine report and code in a Jupyter notebook (with additional
-code separately if necessary) or submit the report as a PDF and code
-separately.
+The analysis models vehicle motion near an intersection at the moment a signal changes from green to yellow. Using kinematic equations and decision criteria, the code evaluates whether a driver can:
 
-**Your code must run and produce the figures and results in your
-report.** Include a file `README.txt` that **describes how to run your
-code**. For a notebook this should be "Run Kernel -> Restart &
-Run". For code in a file this might be "Run `python project_1.py`."
-Include all information that is necessary to run your code and
-reproduce your results.
+- stop before the intersection under reasonable braking,
+- clear the intersection before the signal phase changes,
+- or enter the dilemma zone, where neither option is clearly safe.
 
+The notebook explores how changing parameters such as speed and position affects the outcome and visualizes the resulting decision regions.
 
-## Repository structure
+## Results
 
-Your repository contains
+The project produces plots that illustrate:
 
-* [project_1.pdf](project_1.pdf): project specification
-* `Submission` directory: submit your code and report in this
-  directory; *only content in `Submission` will be graded*
-* `Work` directory: you can use this directory for testing or
-  alternative solutions. Instructors will ignore it for grading.
-* `Grade`: Instructors will submit a grade and evaluation in this
-  directory. (Your grade will also be posted in the Grade book on
-  Canvas.)
-  
-## Tests
+- stopping and clearing boundaries,
+- regions corresponding to safe stop and safe go decisions,
+- the parameter space associated with the dilemma zone.
 
-There are *no grading tests*. The provided tests only check that
-certain files are included.
+These results help show how a vehicle’s approach speed and distance from the intersection determine whether a conflict region appears.
+
+## How to Run
+
+1. Clone this repository.
+2. Open `dilemma_zone_analysis.ipynb` in Jupyter Notebook or JupyterLab.
+3. Run all cells in order.
+4. View the generated plots and analysis in the notebook.
+
+## Tools Used
+
+- Python
+- NumPy
+- Matplotlib
+- Jupyter Notebook
+
+## Notes
+
+This repository is a cleaned and public-facing version of an academic project. Course-specific files, grading materials, and assignment instructions have been removed so the repository focuses on the project itself and its technical content.
